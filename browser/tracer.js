@@ -22,8 +22,7 @@ tracerProvider.register();
 const tracer = opentelemetry.trace.getTracer('lightstep-web-example');
 
 const span = tracer.startSpan('foo');
-span.setAttribute('browser', 'chrome');
-span.setAttribute('version', '1.2.3');
+span.setAttribute('name', 'value');
 span.addEvent('event in foo');
 
 const childSpan = tracer.startSpan('bar', {

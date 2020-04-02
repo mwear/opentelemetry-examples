@@ -87,8 +87,7 @@ Along with the name, add attributes for the browser and version and an event.
 const tracer = opentelemetry.trace.getTracer('lightstep-web-example');
 
 const span = tracer.startSpan('foo');
-span.setAttribute('browser', 'chrome');
-span.setAttribute('version', '1.2.3');
+span.setAttribute('name', 'value');
 span.addEvent('event in foo');
 span.end();
 ```
@@ -181,8 +180,7 @@ module.exports = {
   "timestamp": 1585130342183948,
   "duration": 315,
   "attributes": {
-    "version": "1.2.3",
-    "browser": "chrome"
+    "name": "value"
   },
   "status": { "code": 0 },
   "events": [
